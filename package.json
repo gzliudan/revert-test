@@ -10,6 +10,17 @@
     "npm": ">=6.14.4",
     "yarn": ">=1.22.0"
   },
+  "scripts": {
+    "clean": "rm -rf coverage.json coverage cache artifacts",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "make": "yarn clean && yarn compile && yarn test",
+    "deployTest:dev": "hardhat run --network dev ./scripts/deployTest.js",
+    "deployTest:apothem": "hardhat run --network apothem ./scripts/deployTest.js",
+    "deployTest:xinfin": "hardhat run --network xinfin ./scripts/deployTest.js",
+    "deployTest:mumbai": "hardhat run --network mumbai ./scripts/deployTest.js",
+    "deployTest:polygon": "hardhat run --network polygon ./scripts/deployTest.js"
+  },
   "devDependencies": {
     "@ethersproject/abi": "^5.7.0",
     "@ethersproject/providers": "^5.7.1",
