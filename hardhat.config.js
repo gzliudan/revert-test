@@ -86,6 +86,9 @@ module.exports = {
       gasPrice: 250000000,
       gas: 4712388,
     },
+    local: {
+      url: 'http://127.0.0.1:8545',
+    },
     apothem: {
       url: 'https://rpc.apothem.network',
       chainId: 51,
